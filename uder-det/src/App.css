@@ -1,0 +1,87 @@
+body{
+  background-color: black;
+}
+.Form-margin{
+  margin: 5px;
+  text-align: center;
+} 
+
+.buttonStyle{
+  height: auto;
+  width: 250px;
+  background-color: gray;
+  color: aliceblue;
+  padding: 12px;
+  text-align: center;
+  font-size: 32px;
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+.buttonStyle:hover{
+  height: auto;
+  width: 250px;
+  background-color:aliceblue;
+  color:  gray;
+  padding: 12px;
+  text-align: center;
+  font-size: 32px;
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+.foroption , label{
+  color: black;
+  /* text-align: center; */
+  font-size: 20px;
+}
+input{ 
+  font-family: 'Helvetica', serif; 
+  font-size: 20px; 
+  padding: 6px 10px;  
+   margin-left: 58px ; 
+   width: 200px;
+}
+select{
+  font-family: 'Helvetica', serif; 
+  font-size: 30px; 
+  margin-left: 58px ; 
+   width: 220px;
+  color: blue;
+  padding: 6px 10px;  
+}
+option{
+  font-family: 'Helvetica', serif; 
+  font-size: 30px; 
+  margin-left: 58px ; 
+   width: 400px;
+  color: blue;
+  padding: 6px 10px; 
+}
+  /* For links  */
+.forNavBar{
+  text-align: center;
+  margin-top:28px; 
+  margin-bottom:10px; 
+} 
+.Links{
+  text-decoration:none;
+  color: brown;
+  margin: 13px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* for Form */
+.forForm{
+  text-align: center;
+  height: auto;
+  border:1px solid black;
+  border-radius: 4px;
+  padding: 20px;
+  width: 500px;
+  margin-left: 370px;
+  color: black;
+  background-color: white;
+
+}
