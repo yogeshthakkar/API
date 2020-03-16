@@ -7,6 +7,7 @@ import UserInsert from './UserInsert';
 import NavBar from './NavBar';
 
 function App() {
+  
   return (
     <Router>
       <div className="App">
