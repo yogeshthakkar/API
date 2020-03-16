@@ -1,11 +1,11 @@
 const { MongoClient } = require('mongodb');//in-memory server
 
-import { testFullDummyUser, testEmptyDummyUser } from  '../testDummyUser'
+import { testFullDummyUser, testEmptyDummyUser } from '../testDummyUser'
 
 describe('insert', () => {
-    var connection: any;
-    var db: any;
-    var globalAny: any =global
+    let connection: any;
+    let db: any;
+    let globalAny: any = global
 
     beforeAll(async () => {
         connection = await MongoClient.connect(globalAny.__MONGO_URI__, {
@@ -52,7 +52,7 @@ describe('insert', () => {
        * tries to insert null values in doc
     */
     it('should be fail if you are trying to insert null/empty value in doc', async () => {
-        const users = db.collection('users');
+        let users = db.collection('users');
         if (testEmptyDummyUser.firstname !== '' || testEmptyDummyUser.lastname
             !== '' || testEmptyDummyUser.email !== '' || testEmptyDummyUser.mobile !== '') {
             await users.insertOne(testEmptyDummyUser);

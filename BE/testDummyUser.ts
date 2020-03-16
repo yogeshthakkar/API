@@ -21,7 +21,3 @@ export const testEmptyDummyUser = {
 	"mobile": ""
 }
 
-module.exports = {
-	testFullDummyUser,
-	testEmptyDummyUser
-};
