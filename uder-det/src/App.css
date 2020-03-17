@@ -1,6 +1,18 @@
 body{
   background-color: black;
 }
+/* for Form */
+.forForm{
+  text-align: center;
+  height: auto;
+  border:1px solid black;
+  border-radius: 4px;
+  padding: 20px;
+  width: 500px;
+  margin-left: 370px;
+  color: black;
+  background-color: white;
+}
 .Form-margin{
   margin: 5px;
   text-align: center;
@@ -60,28 +72,23 @@ option{
 }
   /* For links  */
 .forNavBar{
-  text-align: center;
-  margin-top:28px; 
+  margin-top:0px; 
   margin-bottom:10px; 
+  margin: 0px 490px;
 } 
 .Links{
   text-decoration:none;
-  color: brown;
+  color: white;
+  margin-top: 13px;
+  margin: 0px 13px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.Links:hover{
+  text-decoration:none;
+  color: white;
   margin: 13px;
   font-size: 40px;
   cursor: pointer;
 }
 
-/* for Form */
-.forForm{
-  text-align: center;
-  height: auto;
-  border:1px solid black;
-  border-radius: 4px;
-  padding: 20px;
-  width: 500px;
-  margin-left: 370px;
-  color: black;
-  background-color: white;
-
-}

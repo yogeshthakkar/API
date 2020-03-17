@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
+import   * as React  from 'react';
+import  { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import { Alert,Table } from 'reactstrap';
 import axios from 'axios';
 
-require('./App.css');
-require('babel-polyfill');
+import './App.css';
+import 'babel-polyfill';
 
 function UserSearch() {
 
@@ -14,7 +16,7 @@ function UserSearch() {
     });
     let found;
     // set user Input variable
-    const handleChange = (event) => {
+    const handleChange = ( event ) => {
         event.persist();
         setData({
             ...data,
@@ -22,8 +24,8 @@ function UserSearch() {
         });
     }
 
-    //excute on button click
-    const handleSearch = async (event) => {
+    //execute on button click
+    const handleSearch = async ( event ) => {
         event.preventDefault();
 
         if (data.userInput === '') {
@@ -58,9 +60,8 @@ function UserSearch() {
                 <button onClick={handleSearch} className="buttonStyle">Search</button>
             </form>
             
-            < center >
-                <MDBTable hover>
-                    <MDBTableHead style={{ color: "white", fontSize: '30px' }}>
+                <Table hover dark style={{margin:'7.5px 380px' , width:'230px'}}>
+                    <thead style={{ color: "white", fontSize: '30px' }}>
                         {
                             data2.length > 0 ?
                                 <tr>
@@ -70,8 +71,8 @@ function UserSearch() {
                                 </tr>
                                 : ''
                         }
-                    </MDBTableHead>
-                    <MDBTableBody>
+                    </thead>
+                    <tbody>
                         {
                             data2.map(d => (
                                 <tr style={{ color: "white", fontSize: '30px' }} key={d.email}>
@@ -80,12 +81,9 @@ function UserSearch() {
                                     <td>{d.email}</td>
                                 </tr>
                             ))
-                        }
-
-                    </MDBTableBody>
-                </MDBTable>
-            </center >
-
+                        }                             
+                    </tbody>
+                </Table>
         </div>
     )
 }

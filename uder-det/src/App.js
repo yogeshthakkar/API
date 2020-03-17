@@ -13,7 +13,7 @@ function App() {
       <div className="App">
         <NavBar />
         <Route path='/insert' to="/" component={UserInsert} />
-        <Route path='/search' to="/" component={UserSearch} />
+        <Route path='/search' to="/" component={UserSearch} />        
       </div>
     </Router>
   );

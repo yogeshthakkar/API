@@ -2,12 +2,12 @@ const mongoos = require(`mongoose`);
 const bodyParser = require(`body-parser`);
 const cors = require(`cors`);//express middleware that allows request from other domain
 const express = require('express');
-require(`dotenv`).config();
+const keys = require('./data');
 const app = express();
 
 const router = require('../routes/userRoutes')
 
-const url = `mongodb://${process.env.HOST}/?readPreference=primary&appname=${process.env.NAME}&ssl=false` ;
+const url = keys.URL ;
 // Server configuration
 const hostname = 'localhost';
 const port = 3001;

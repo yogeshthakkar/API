@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.css';
+import { Progress } from 'reactstrap';
+
+import CustomAlert from './component/CustomAlert'
 
 require('babel-polyfill');
 require('./App.css');
@@ -40,7 +44,9 @@ function UserInsert() {
         firstname: '', middlename: '', lastname: '', email: '', mobile: '', address: '', city: '',
         state: '', postalcode: '', education: '', gender: '', occupation: ''
     })
-
+    const [message, setMessage] = useState({
+        alertMessage: ''
+    });
     const handleChange = (event) => {
         event.persist();
         const val = event.target.value;
@@ -51,6 +57,7 @@ function UserInsert() {
     }
 
     const handleSubmit = async (event) => {
+        document.documentElement.scrollTop = 0;//scroll page to top
         event.preventDefault();
         //spread data object value
         const {
@@ -67,10 +74,14 @@ function UserInsert() {
             console.log(result);
             axios.post('http://localhost:3001/insert', result)
                 .then(res => {
-                    return alert(`User inserted successfully`)
+                    setMessage({
+                        alertMessage: 'User inserted successfully'
+                    })
                 })
                 .catch(err => {
-                    alert('Unabel to add User')
+                    setMessage({
+                        alertMessage: 'Unabel to add User'
+                    })
                     console.log(err);
                 })
             // empty data ,so it won't create issue
@@ -82,6 +93,8 @@ function UserInsert() {
 
     return (
         <div className="forFormBody">
+            {message.alertMessage == 'Unabel to add User' ? <CustomAlert alertMessage='Unabel to add User' myColor='danger' /> : ''}
+            {message.alertMessage == 'User inserted successfully' ? <CustomAlert alertMessage='User inserted successfully' myColor='success' /> : ''}
             <form className="forForm">
                 <label>First Name:</label><br />
                 <input type="text" name="firstname" onChange={handleChange} value={data.firstname} className="Form-margin" pattern="/^[a-zA-Z\s]+$/" /><br />
@@ -139,5 +152,4 @@ function UserInsert() {
     )
 }
 
-// module.exports = UserInsert;
 export default UserInsert;
