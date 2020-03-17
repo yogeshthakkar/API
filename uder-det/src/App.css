@@ -1,5 +1,5 @@
 body{
-  background-color: black;
+  background-color: whitesmoke;
 }
 /* for Form */
 .forForm{
@@ -78,7 +78,7 @@ option{
 } 
 .Links{
   text-decoration:none;
-  color: white;
+  color: black;
   margin-top: 13px;
   margin: 0px 13px;
   font-size: 40px;
@@ -86,7 +86,7 @@ option{
 }
 .Links:hover{
   text-decoration:none;
-  color: white;
+  color: black;
   margin: 13px;
   font-size: 40px;
   cursor: pointer;
